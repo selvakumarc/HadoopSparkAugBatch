@@ -1,0 +1,45 @@
+Hadoop  -  FS  -  Shell  Commands
+Lab – Exercise
+1) cd $HADOOP_HOME   (moves to hadoop home installed directory)
+2) bin/start-all.sh     (Start all process of Hadoop)
+3) Jps                          (To view the list of current process running)
+4) ls   - (list local folders/files)
+5) hdfs dfs -ls /  ( list allhdfs folders)
+6) hdfs dfs -mkdir /inputdir
+7) hdfs dfs -mkdir /outputdir
+create file in local
+a. vi a.txt
+b. press i
+c. type some contents
+8) hdfs dfs -copyFromLocal  a.txt /inputdir(coping file from local
+path to HDFS path)
+9) hdfs dfs -put b.txt c.txt /inputdir ( coping files from local path
+to HDFS path)
+10) hdfs dfs -copyToLocal /inputdir/a.txt /inputdir/b.txt
+/home/hduser/copyLocal (coping a single file from HDFS path to Local
+path)
+
+11) hdfs dfs -get /inputdir/a.txt /inputdir/b.txt
+/home/hduser/copyLocal (coping a file from HDFS path to Local path)
+
+12) hdfs dfs -put copyLocal /inputdir/dataset (coping a folder from
+local path to HDFS path)
+
+13) hdfs dfs -cp /inputdir/a.txt /outputdir/b.txt  (Coping
+files from HDFS to HDFS)
+
+14) hdfs dfs -rm /inputdir/a.txt   (removes a file)
+
+15) hdfs dfs -df /  (display disk free space)
+
+16) hdfs dfs -cat /inputdir/b.txt (view the contents of file)
+17) hdfs dfs -du /inputdir     (displays the disk       utilization)
+18) hdfs dfs -du /    (displays the disk utilization details)
+19) hdfs version (hadoop version)
+20) hdfs dfs -expunge (Empty Trash)
+21) hdfs dfs   -chown    -R  <username>     /<PATh>  (set privilege)
+22) hdfs dfs  -chmod   -R   755   /<PATH>   (set permission)
+25) hdfs dfs -setrep -w 3 /inputdir/b.txt
+26) hdfs dfs -stat /inputdir
+27) hdfs dfs -count /inputdir (directory count, file count, bytes)
+28) hdfs dfs -help
